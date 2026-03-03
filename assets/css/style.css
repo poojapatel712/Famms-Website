@@ -1,0 +1,1596 @@
+*{
+    margin: 0;
+    padding: 0;
+      /* font-family: 'Montserrat', sans-serif; */
+      font-family: 'Playfair Display', serif;
+
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.page-main{
+    display: block;
+}
+.header-main{
+    display: block;
+    
+}
+.container{
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.header-main .header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header-main .header-inner .logo-image{
+    display: block;
+    padding: 20px;
+
+}
+.header-main .header-inner .logo-image img{
+    width: 200px;
+}
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.header-main .header-inner .menu{
+    display: block;
+}
+
+.header-main .header-inner .menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-main .header-inner .menu ul li {
+  position: relative;   /* 🔥 Important */
+  padding: 20px;
+}
+.header-main .header-inner .menu ul> li >a{
+  display: block;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+/* submenu */
+.header-main .header-inner .menu ul li ul {
+  position: absolute;   /* 🔥 Dropdown ne box banavse */
+  top: 60px;
+  left: 0;
+  background: white;
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  padding: 15px 0;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  border: 2px solid black;
+  z-index: 999;
+}
+
+/* submenu items */
+.header-main .header-inner .menu ul li ul li {
+  padding: 10px 20px;
+}
+
+/* submenu link */
+.header-main .header-inner .menu ul li ul> li> a {
+  font-size: 16px;
+  /* color: black; */
+  text-transform: uppercase;
+}
+
+/* hover dropdown open */
+.header-main .header-inner .menu ul li:hover ul {
+  display: flex;
+}
+
+
+.header-main .header-inner .header-icon{
+    display: block;
+    padding: 20px;
+}
+.header-main .header-inner .header-icon .cart{
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+.header-main .header-inner .menu ul> li:hover a{
+    color:#f85b64;
+}
+.header-main .header-inner .header-icon .cart:hover{
+    color: #f85b64;
+}
+.mobile-icons{
+  display: none;
+}
+/* 1199px ni media */
+
+@media (max-width:1199px){
+
+    .container{
+        width: 100%;
+        /* max-width: 1000px;   video jevu center spacing */
+    }
+
+    /* HEADER */
+    .header-main .header-inner .menu ul li{
+        padding: 15px;
+    }
+
+    .header-main .header-inner .menu ul li a{
+        font-size: 18px;
+    }
+
+    .header-main .header-inner .logo-image img{
+        width: 200px;
+    }
+    
+}
+
+/* ... તમારો જૂનો CSS કોડ અહીં રહેશે ... */
+
+/* Mobile Responsive Logic for 330px - 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Hamburger બતાવવા માટે */
+        font-size: 30px;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .logo-image {
+        order: 1;
+    }
+
+    .header-inner {
+        position: relative;
+    }
+
+    /* Desktop icons hide on mobile */
+    .desktop-only {
+        display: none !important;
+    }
+
+    /* Menu Sidebar Style */
+    .header-main .header-inner .menu {
+        display: none; /* Default hide */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        border-top: 1px solid #eee;
+    }
+
+    .header-main .header-inner .menu.mobile-active {
+        display: block; /* Toggle click પર દેખાશે */
+    }
+
+    .header-main .header-inner .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-main .header-inner .menu ul li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f9f9f9;
+        text-align: center;
+    }
+
+    /* Submenu for Mobile */
+    .header-main .header-inner .menu ul li ul.submenu {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background: #fdfdfd;
+    }
+
+    .header-main .header-inner .menu ul li ul.submenu-active {
+        display: block;
+    }
+
+    .mobile-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 20px;
+    }
+}
+
+/* Extra small screen adjustment (330px) */
+@media (max-width: 480px) {
+  .container{
+    width: 100%;
+  }
+    .header-main .header-inner .logo-image img {
+        width: 130px; /* નાની સ્ક્રીન માટે લોગો નાનો કર્યો */
+    }
+}
+
+
+
+/* header css end */
+
+/* banner css start */
+
+.banner-main{
+    display: block;
+    position: relative;
+
+}
+.banner-main .banner-img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    /* height: 110vh; */
+}
+.banner-main .banner-img img{
+    width: 100%;
+}
+.banner-main .banner-inner{
+     position: absolute;
+  top: 0;
+  left: 15%;
+  /* width: 100%; */
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+.banner-main .banner-inner .banner-text{
+      max-width: 500px;
+  color: #fff;
+  z-index: 10; 
+}
+.banner-main .banner-inner .banner-text span{
+    display: block;
+    font-size: 60px;
+    color: #f7444e;
+    font-weight: 600;
+      font-family: 'Playfair Display', serif;
+}
+.banner-main .banner-inner .banner-text h2{
+    display: block;
+    font-size: 60px;
+    color: #002c3e;
+    font-weight: 600;
+      font-family: 'Playfair Display', serif;
+
+}
+.banner-main .banner-inner .banner-text p{
+    display: block;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #414041;
+}
+.banner-main .banner-inner .banner-text a{
+    display: inline-block;
+    font-size: 20px;
+   font-weight: 700;
+    margin-top: 30px;
+    background-color: #f7444e;
+    color: white;
+    padding: 12px 45px;
+    border: 1px solid #f7444e;
+    transition: all 0.3s ease;
+}
+.banner-main .banner-inner .banner-text a:hover{
+    color: #f7444e;
+    background-color: transparent;
+}
+
+/* 1199px ni media */
+
+@media (max-width:1199px) {
+  .container{
+    width: 100%;
+  }
+   /* BANNER */
+    .banner-main .banner-img{
+        /* height: 90vh;        proper hero height */
+        object-fit: cover;
+    }
+
+    .banner-main .banner-inner{
+        left: 8%;            /* video jevu left spacing */
+        /* height: 100%; */
+    }
+
+    .banner-main .banner-inner .banner-text{
+        max-width: 420px;
+    }
+
+    .banner-main .banner-inner .banner-text span{
+        font-size: 58px;
+    }
+
+    .banner-main .banner-inner .banner-text h2{
+        font-size: 52px;
+    }
+
+    .banner-main .banner-inner .banner-text p{
+        font-size: 18px;
+    }
+
+    .banner-main .banner-inner .banner-text a{
+        padding: 10px 35px;
+        font-size: 18px;
+    }
+  
+}
+
+@media (max-width: 768px) {
+
+  .container{
+    width: 100%;
+  }
+
+  .banner-main .banner-inner {
+    left: 5%;
+    height: auto;
+    padding-top: 40px;
+  }
+
+  .banner-main .banner-inner .banner-text span {
+    font-size: 35px;
+  }
+
+  .banner-main .banner-inner .banner-text h2 {
+    font-size: 40px;
+  }
+
+  .banner-main .banner-inner .banner-text p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .banner-main .banner-inner .banner-text a {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container{
+    width: 100%;
+  }
+  /* Banner Image Proper Crop */
+  .banner-main .banner-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;  /* model right side visible */
+  }
+
+  /* Text Overlay */
+  .banner-main .banner-inner {
+    position: absolute;
+    top: 0;
+    left: 6%;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* Sale Text */
+  .banner-main .banner-inner .banner-text span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* Heading */
+  .banner-main .banner-inner .banner-text h2 {
+    font-size: 18px;
+    margin-top: 6px;
+    line-height: 1.2;
+  }
+
+  /* Paragraph Hide (mobile ma nahi joie) */
+  .banner-main .banner-inner .banner-text p {
+  font-size: 14px;
+
+  }
+
+  /* Button */
+  .banner-main .banner-inner .banner-text a {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+  }
+
+  /* Pagination Dots Bottom Right */
+  /* .swiper-pagination {
+    bottom: 10px !important;
+    text-align: right !important;
+    padding-right: 15px;
+  }*/
+} 
+
+/* banner css end */
+
+/* service css start */
+
+.service-main{
+    display: block;
+    margin-top: 50px;
+}
+.service-inner{
+    display: block;
+}
+.service-main .service-inner .service-title , .about-main .service-inner{
+    display: block;
+    text-align: center;
+}
+.service-main .service-inner .service-title h2 , .about-main .service-inner .service-title h2{
+    display: block;
+    font-size: 48px;
+    
+}
+.service-main .service-inner .service-contain , .about-main .service-main .service-inner .service-contain{
+    display: flex;
+    color: white;
+    margin-top: 35px;
+    
+    
+}
+.service-main .service-inner .service-contain .service-item{
+    display: block;
+    padding: 70px;
+    margin: 20px;
+     background-color: #002c3e;
+     border: 1px solid #fff;
+     border-radius: 8px;
+    
+}
+.service-main .service-inner .service-contain .service-item .service-item-inner{
+    display: block;
+}
+.service-main .service-inner .service-contain .service-item .service-item-inner .service-icon{
+    display: block;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.service-main .service-inner .service-contain .service-item .service-item-inner .service-text{
+    display: block;
+    text-align: center;
+}
+.service-main .service-inner .service-contain .service-item .service-item-inner .service-text h5{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.service-main .service-inner .service-contain .service-item .service-item-inner .service-text p{
+    display: block;
+    font-size: 16px;
+}
+
+/* 1199px ni media query */
+
+@media (max-width: 1199px) {
+  .container{
+    width: 100%;
+  }
+    .service-main .service-inner .service-contain {
+        gap: 20px;
+        margin: 30px;
+    }
+
+    .service-main .service-inner .service-contain .service-item {
+        padding: 50px 25px;
+    }
+
+    .service-text h5 {
+        font-size: 22px;
+    }
+
+    .service-text p {
+        font-size: 16px;
+    }
+}
+
+/* ===== 767px screen mate ===== */
+@media (max-width: 768px) {
+
+  .container{
+    width: 100%;
+  }
+
+  .service-main .service-inner .service-contain{
+    flex-direction: column;   /* row → column */
+    align-items: center;
+  }
+
+  .service-main .service-inner .service-contain .service-item{
+    width: 100%;        /* full width */
+    max-width: 500px;   /* center look */
+    padding: 50px 25px; /* padding mobile mate adjust */
+    margin: 15px 0;
+  }
+
+  .service-main .service-inner .service-contain .service-item .service-icon{
+    font-size: 32px;
+  }
+
+  .service-main .service-inner .service-contain .service-item .service-text h5{
+    font-size: 20px;
+  }
+
+  .service-main .service-inner .service-contain .service-item .service-text p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container{
+    width: 100%;
+  }
+  .service-main .service-inner .service-title h2{
+    font-size: 30px;
+  }
+}
+
+/* service css end */
+
+
+/* Arrvial css start */
+
+.arrival-main {
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+  overflow: hidden;
+  padding: 90px 0 0 0;
+}
+
+/* Image Proper Banner */
+.arrival-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* banner fill */
+  object-position: left;      /* person left side visible */
+  display: block;
+}
+
+/* Text Block */
+.arrival-inner {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateY(-50%);
+  max-width: 500px;
+}
+
+/* Heading */
+.arrival-inner h3 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #002c3e;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.arrival-inner p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Button */
+.arrival-inner a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 45px;
+  background: #f7444e;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+
+  .arrival-main {
+    padding: 30px 0 0 0;
+  }
+  .container{
+    width: 100%;
+  }
+
+  /* Image ne center karso */
+.arrival-main .arrival-image img {
+   object-position: center;
+   width: 130%;
+  }
+
+  /* Text block ne absolute mathi normal banavo */
+  .arrival-inner {
+    position: absolute;
+    top: 10%;
+    left: 51%;
+    transform: none;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  /* Heading small */
+  .arrival-main .arrival-inner h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  /* Paragraph small */
+  .arrival-main .arrival-inner p {
+    font-size: 13px;
+    /* line-height: 1.4; */
+  }
+
+  /* Button proper */
+  .arrival-main .arrival-inner a {
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+
+/* arrival css end */
+
+/* product css start */
+
+.product-main {
+  padding: 80px 0;
+}
+
+.product-main .product-inner{
+    display: block;
+}
+.product-main .product-inner .product-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.product-main .product-inner .product-title h2 {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.product-main .product-inner .product-title span {
+  color: red;
+  position: relative;
+}
+
+.product-main .product-inner .product-title span::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+}
+
+/* ✅ Product Grid Layout */
+.product-main .product-images {
+  display: flex;
+  flex-wrap: wrap;   /* 🔥 Important */
+  gap: 30px;         /* spacing between cards */
+  justify-content: center;
+}
+
+/* ✅ Each Product Card */
+.product-main .product-images .product-item {
+  width: 30%;   /* 3 cards per row */
+}
+
+.product-main .product-images .product-item .product-item-inner {
+  background: #f7f8f9;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+}
+
+.product-images .product-item .product-item-inner:hover {
+  transform: translateY(-8px);
+}
+
+/* ✅ Product Image */
+.product-main .product-images .product-item .product-item-inner .product-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;   /* image crop nai thase */
+  margin-bottom: 25px;
+}
+/* ૧. ઈમેજ કન્ટેનરને સેટ કરો */
+.product-image {
+  position: relative;
+  overflow: hidden; /* બટનો બહાર ન જાય */
+  background-color: #f7f8f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ૨. Overlay જે પહેલા છુપાયેલું રહેશે (Opacity: 0) */
+.hover_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* ઈમેજ થોડી ઝાંખી દેખાય તે માટે */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* શરૂઆતમાં દેખાશે નહીં */
+  transition: all 0.3s ease-in-out;
+}
+
+/* ૩. જ્યારે કાર્ડ પર હોવર થાય ત્યારે Overlay દેખાય */
+.product-item-inner:hover .hover_overlay {
+  opacity: 1;
+}
+
+/* ૪. બટનનું સ્ટાઈલિંગ */
+.hover_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.add_cart_btn, .buy_now_btn {
+  width: 160px;
+  height: 45px;
+  border-radius: 40px; /* ગોળ બટન */
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Add To Cart - Red Button */
+.add_cart_btn {
+  background-color: #f7444e;
+  color: #ffffff;
+}
+
+.add_cart_btn:hover {
+  background-color: transparent;
+  color: #f7444e;
+  border: 1px solid #f7444e;
+}
+
+/* Buy Now - Black Button */
+.buy_now_btn {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.buy_now_btn:hover {
+  background-color: transparent;
+  color: #212529;
+  border: 1px solid #212529;
+}
+/* ✅ Product Text */
+.product-main .product-images .product-item .product-item-inner .product-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-main .product-images .product-item .product-item-inner .product-text h5 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.product-main .product-images .product-item .product-item-inner .product-text p {
+  margin: 0;
+  color: #222;
+  font-size: 20px;
+}
+.product-main .product-inner .btn{
+    display: block;
+    background-color: #f7444e;
+    margin-top: 35px;
+}
+.product-main .product-inner .btn a{
+    display: inline-block;
+    color: white;
+    padding: 10px 40px;
+    border: 1px solid #f7444e;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+.product-main .product-inner .btn a:hover{
+    background-color: white;
+    color: #f7444e;
+    border: 1px solid #f7444e;
+
+}
+
+@media (max-width:1199px){
+  .container{
+    width: 100%;
+  }
+  .product-images{
+    margin: 25px;
+  }
+}
+
+/* 📱 767px Screen */
+@media (max-width: 768px) {
+
+  .container{
+    width: 100%;
+  }
+
+  .product-main {
+    padding: 50px 0;
+  }
+
+  /* Title size mobile ma ochhu */
+  .product-main .product-inner .product-title h2 {
+    font-size: 38px;
+  }
+
+  /* 🔥 Grid → 2 cards per row */
+  .product-main .product-images {
+    gap: 20px;
+  }
+
+  .product-main .product-images .product-item {
+    width: 45%;   /* 2 items in one row */
+  }
+
+  /* Image height thodi adjust */
+  .product-main .product-images .product-item 
+  .product-item-inner .product-image img {
+    height: 140px;
+  }
+
+  /* Text size mobile ma */
+  .product-main .product-images .product-item 
+  .product-item-inner .product-text h5 {
+    font-size: 18px;
+  }
+
+  .product-main .product-images .product-item 
+  .product-item-inner .product-text p {
+    font-size: 16px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+
+  .container{
+    width: 100%;
+  }
+
+  .product-main {
+    padding: 50px 0;
+  }
+
+  .product-main .product-inner .product-title h2 {
+    font-size: 32px;
+  }
+
+  .product-main .product-images {
+    gap: 20px;
+  }
+
+  .product-main .product-images .product-item {
+    width: 100%;   /* 🔥 single column */
+  }
+
+  .product-main .product-images .product-item .product-item-inner {
+    padding: 30px 15px;
+  }
+
+  .product-main .product-images .product-item .product-item-inner .product-image img {
+    height: 180px;   /* thodi moti image mobile ma */
+  }
+
+  .product-main .product-images .product-item .product-item-inner .product-text {
+    font-size: 18px;
+  }
+}
+
+
+/* product css end */
+
+/* Offer css start */
+
+.offer-main {
+  background-color: #d4ced0;
+  padding: 100px 0;
+  text-align: center;
+}
+.offer-main .offer-inner{
+    display: block;
+}
+
+.offer-main .offer-inner .offer-item h2 {
+  font-size: 45px;
+  color: #002c3e;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.offer-main .offer-inner .offer-item p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* Form Center */
+.offer-main .offer-inner .offer-item form {
+  display: inline-block;
+}
+
+/* Input Field */
+.offer-main .offer-inner .offer-item form input {
+  width: 100%;
+  height: 70%;
+  padding: 18px 25px;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.offer-main .offer-inner .offer-item form button {
+  background-color: #f7444e;
+  color: white;
+  border: none;
+  padding: 15px 70px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  /* cursor: pointer; */
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.offer-main .offer-inner .offer-item form button:hover {
+  background-color: #d4ced0;
+  color: #f7444e;
+  border: 1px solid #d6333b;
+}
+
+
+/* ========== 480px Responsive ========== */
+@media (max-width: 480px) {
+
+  .offer-main {
+    padding: 60px 15px;
+  }
+  .container{
+    width: 100%;
+  }
+  .offer-main .offer-inner .offer-item h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .offer-main .offer-inner .offer-item p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* Form full width */
+  .offer-main .offer-inner .offer-item form {
+    width: 90%;
+    max-width: 420px;
+  margin: 0 auto;
+  }
+
+  /* Input full width & proper height */
+  .offer-main .offer-inner .offer-item form input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* Button center & rounded like image */
+  .offer-main .offer-inner .offer-item form button {
+    width: 70%;
+    padding: 14px 0;
+    font-size: 16px;
+    border-radius: 40px;
+  }
+}
+
+
+/* Offer css end */
+
+/* testimonial css start */
+
+.testimonial-main {
+  padding: 90px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-main .testimonial-inner{
+  display: block;
+}
+
+.testimonial-main .testimonial-inner .testimonial-title h1 {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.testimonial-main .testimonial-inner .testimonial-title h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: #f7444e;
+  margin: 10px auto;
+}
+.testimonial-main .testimonial-inner .testimonial-contain{
+  display: block;
+}
+/* Hide Radio Inputs */
+.testimonial-main .testimonial-inner .testimonial-contain input[name="slider"] {
+  display: none;
+}
+
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(0px);
+  /* transition: all 0.8s ease; */
+}
+
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card  .img-box {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 25px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card .img-box img { 
+  width: 100%;
+ }
+
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card .detail-box h5 {
+  font-size: 20px;
+  font-weight: bold; 
+   margin-bottom: 5px; 
+  }
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card .detail-box h6 { 
+  display: block;
+  font-size: 16px;
+  color: #999; 
+  margin-bottom: 20px; 
+}
+.testimonial-main .testimonial-inner .testimonial-contain .slider-wrapper .testimonial-card .detail-box p{
+  display: block;
+  font-size: 18px;
+}
+
+/* Show Slide based on Radio Selection */
+#s1:checked ~ .slider-wrapper .slide-1,
+#s2:checked ~ .slider-wrapper .slide-2 {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+/* -------- AUTO SLIDE -------- */
+
+/* animation time */
+@keyframes autoSlide {
+  0%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { opacity: 0; }
+  95%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply animation */
+.slide-1 {
+  animation: autoSlide 8s infinite;
+}
+
+.slide-2 {
+  animation: autoSlide 8s infinite;
+  animation-delay: 4s;
+}
+
+/* Custom Arrows */
+.nav-arrows {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.nav-arrows label {
+  background: #f7444e;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.3s;
+  
+}
+
+.nav-arrows label:hover {
+  background: #000;
+}
+
+/*testimonial css end */
+
+/* footer css start */
+
+.footer-main {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 70px 0 0 0;
+}
+
+.footer-inner {
+  width: 100%;
+}
+
+.footer-contain {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* Each Column */
+.footer-item {
+  width: 25%;
+}
+
+.footerlogoimage img {
+  width: 160px;
+  margin-bottom: 25px;
+}
+
+/* Address + Telephone + Email */
+.footer-text span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.footer-text span p {
+  display: inline;
+  font-weight: normal;
+  margin-left: 5px;
+  color: #444;
+}
+
+/* Column Heading */
+.footer-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Links */
+.footer-subtext ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-subtext ul li {
+  margin-bottom: 12px;
+}
+
+.footer-subtext ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-subtext ul li a:hover {
+  color: #f7444e;
+}
+
+/* Newsletter Text */
+.footer-subtext p {
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Newsletter Input + Button */
+.footer-box {
+  display: flex;
+  width: 100%;
+}
+
+.footer-box input {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.footer-box button {
+  width: 50%;
+  border: none;
+  background: #f7444e;
+  color: white;
+  font-size: 16px;
+  /* cursor: pointer; */
+}
+
+.footer-box button:hover {
+  background: black;
+}
+
+/* Bottom Black Bar */
+.footerbox {
+  margin-top: 60px;
+  background: #222;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 2;
+}
+
+.footerbox p {
+  margin: 0;
+  color: white;
+}
+
+.footerbox span {
+  color: #f7444e;
+}
+
+
+@media (max-width:1199px){
+  .container{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .container{
+    width: 100%;
+  }
+
+  .footer-contain {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;   /* block center */
+  }
+
+  .footer-item {
+    width: 100%;
+    max-width: 420px;      /* same width like design */
+  }
+
+  /* Logo only center */
+  .footerlogoimage {
+    text-align: center;
+  }
+
+  .footerlogoimage img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  /* बाकी badhu LEFT j rehse */
+  .footer-text,
+  .footer-header,
+  .footer-subtext {
+    text-align: left;
+  }
+
+  /* Newsletter box */
+ .footer-box {
+    flex-direction: row;      /* 🔥 same line */
+  }
+
+  .footer-box input {
+    width: 70%;
+  }
+
+  .footer-box button {
+    width: 30%;
+  }
+
+  /* Bottom bar */
+  .footerbox {
+    margin-top: 40px;
+    padding: 15px 10px;
+    text-align: center;
+  }
+}
+
+/* footer css end */
+
+/* about us css */
+
+.about-main{
+  display: block;
+  background-color: #f7444e;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 45px;
+  font-family: 600;
+}
+
+/* about us css end */
+
+/* ṭestmonial css start */
+
+.testimonialmain{
+  display: block;
+  background-color: #f7444e;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 45px;
+  font-family: 600;
+}
+
+/* testimonial css end */
+
+/* product css start */
+.productmain{
+  display: block;
+  background-color: #f7444e;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 45px;
+  font-family: 600;
+}
+
+/* product css end */
+
+/* blog css start */
+
+.blog-main{
+  display: block;
+  background-color: #f7444e;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 45px;
+  font-family: 600;
+}
+
+/* blog css end */
+
+
+/* footer2 css start */
+
+.footermain{
+  display: block;
+  background-color:#002c3e;
+  color: white;
+  padding: 50px 0 0 30px;
+
+}
+.footermain .footerinner{
+  display: flex;
+}
+.footermain .footerinner .footer2-box{
+  display: block;
+  margin-right: 150px;
+}
+.footermain .footerinner .footer2-box h2{
+  display: block;
+  padding: 20px;
+  font-size: 28px;
+
+}
+.footermain .footerinner .footer2-box p{
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+}
+.footer2-box p:last-of-type {
+  line-height: 28px;
+  font-size: 17px;
+}
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  /* background: #f7444e; */
+  color: #f7444e;
+}
+
+.footerbottom {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footerbottom hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 70%;
+  margin: 20px auto;
+}
+
+.footerbottom p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* 330px કે તેનાથી નાની સ્ક્રીન માટે ખાસ ફેરફાર */
+@media (max-width: 480px) {
+  .footermain {
+    padding: 40px 15px; /* સાઈડની પેડિંગ ઓછી કરી જેથી કન્ટેન્ટ વચ્ચે રહે */
+    text-align: center; /* બધું લખાણ સેન્ટરમાં કરવા માટે */
+  }
+  .container{
+    width: 100%;
+  }
+
+  .footermain .footerinner {
+    flex-direction: column; /* ડેટા એકની નીચે એક આવશે */
+    align-items: center;
+  }
+
+  .footermain .footerinner .footer2-box {
+    margin-right: 0; /* વધારાની માર્જિન કાઢી નાખવી */
+    margin-bottom: 30px; /* બે સેક્શન વચ્ચે જગ્યા રાખવા માટે */
+    width: 100%;
+  }
+
+  .footermain .footerinner .footer2-box h2 {
+    padding: 10px 0;
+    font-size: 24px;
+  }
+
+  .social-icons {
+    justify-content: center; /* આઈકોન્સને સેન્ટરમાં લાવવા */
+    margin-top: 15px;
+  }
+
+  .footerbottom hr {
+    width: 90%; /* લાઈન થોડી મોટી કરી */
+  }
+  
+  .footermain .footerinner .footer2-box p {
+    padding: 5px 0;
+  }
+}
+/* footer2 css end */
+
+/*conatct css start  */
+.contact-main{
+  display: block;
+  background-color: #f7444e;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding: 45px;
+  font-family: 600;
+}
+
+.contact-form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 200px;
+  margin: auto;
+  padding: 15px;
+  background: #333;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #f7444e;
+}
+
+/* contact css end */
+

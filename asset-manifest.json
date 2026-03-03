@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Famms-Website/static/css/main.4e6c70de.css",
+    "main.js": "/Famms-Website/static/js/main.b9e196aa.js",
+    "index.html": "/Famms-Website/index.html",
+    "main.4e6c70de.css.map": "/Famms-Website/static/css/main.4e6c70de.css.map",
+    "main.b9e196aa.js.map": "/Famms-Website/static/js/main.b9e196aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e6c70de.css",
+    "static/js/main.b9e196aa.js"
+  ]
+}
